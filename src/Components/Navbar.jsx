@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { GlobalContext } from './utils/GlobalContext';
 
 const Navbar = () => {
@@ -10,7 +10,6 @@ const Navbar = () => {
   };
 
   return (
-  <BrowserRouter>
     <nav className={`navbar ${state.theme}`}>
       {/* Aquí se agregan los links correspondientes a las rutas definidas */}
       <ul className="navbar-links">
@@ -29,7 +28,6 @@ const Navbar = () => {
         {state.theme === 'light' ? 'Modo Oscuro' : 'Modo Claro'}
       </button>
     </nav>
-    </BrowserRouter>
   );
 };
 

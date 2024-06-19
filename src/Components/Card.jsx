@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Card = ({ name, username, id }) => {
 
   const addFav = () => {
-    const favDentists = JSON.parse(localStorage.getItem('favDentists')) || [];
+    const favDentists = JSON.parse(localStorage.getItem('favs')) || [];
     const newFav = { name, username, id };
 
     // Evitar duplicados
     if (!favDentists.some(dentist => dentist.id === id)) {
       favDentists.push(newFav);
-      localStorage.setItem('favDentists', JSON.stringify(favDentists));
+      localStorage.setItem('favs', JSON.stringify(favDentists));
     }
   }
 
