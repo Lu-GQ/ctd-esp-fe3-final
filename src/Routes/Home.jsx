@@ -13,7 +13,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="home">
+    <div className="card-container">
       {state.dentists.map(dentist => (
         <Card
           key={dentist.id}
