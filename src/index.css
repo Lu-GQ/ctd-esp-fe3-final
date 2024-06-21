@@ -120,3 +120,57 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-right a, .navbar-right button {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-right button {
+  font-size: 20px;
+}
+
+.navbar.dark {
+  background-color: #343a40;
+}
+
+.navbar.dark .navbar-right a, .navbar.dark .navbar-right button {
+  color: #fff;
+}
