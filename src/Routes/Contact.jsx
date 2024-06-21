@@ -26,6 +26,7 @@ const Contact = () => {
 
   const handleChange = e => {
     const { name, value } = e.target;
+    setErrors([]);
     setFormData({ ...formData, [name]: value });
   };
 
@@ -39,20 +40,19 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div class="contact">
+      <h2>Want to know more?</h2>
+      <h4>Send us your questions and we will contact you</h4>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Nombre completo</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
-          {errors.name && <p>{errors.name}</p>}
+          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Full name' />
         </div>
         <div>
-          <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-          {errors.email && <p>{errors.email}</p>}
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
         </div>
         <button type="submit">Enviar</button>
       </form>
+      {(errors.name || errors.email) && <p>{"Por favor verifique su información nuevamente"}</p>}
       {successMessage && <p>{successMessage}</p>}
     </div>
   );

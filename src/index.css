@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.center-text {
+  text-align: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -59,7 +63,11 @@ form{
   justify-content: space-around;
   width: 300px;
   height: 100px;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+form input {
+  width: 100%;
 }
 
 .card {
@@ -197,4 +205,8 @@ body, html {
   margin: 0 auto; /* Centrado horizontalmente */
   padding: 20px 0px 0px 0px; /* Espacio alrededor del contenedor */
   box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+.contact {
+  text-align: center;
 }
