@@ -47,8 +47,7 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
+  width: 100%;
   margin-top: 2rem;
 }
 
@@ -173,4 +172,12 @@ body, html {
 
 .navbar.dark .navbar-right a, .navbar.dark .navbar-right button {
   color: #fff;
+}
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.navbar-links li {
+  list-style-type: none;  /* Eliminar viñetas en cada li */
 }

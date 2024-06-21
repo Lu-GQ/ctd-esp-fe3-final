@@ -21,10 +21,10 @@ const Navbar = () => {
             <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/contacto">Contacto</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/favs">Favoritos</Link>
+            <Link to="/favs">Favs</Link>
           </li>
         </ul>
         {/* Implementación de la lógica para cambiar de tema con el botón */}
