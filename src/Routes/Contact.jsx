@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from "../Components/utils/GlobalContext";
 
 const Contact = () => {
+  const { state, dispatch } = useContext(GlobalContext);
   const [formData, setFormData] = useState({ name: '', email: '' });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
@@ -40,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <div class="contact">
+    <div className={`content contact ${state.theme}`}>
       <h2>Want to know more?</h2>
       <h4>Send us your questions and we will contact you</h4>
       <form onSubmit={handleSubmit}>

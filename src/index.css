@@ -45,7 +45,6 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  margin-top: 2rem;
 }
 
 footer > img{
@@ -87,6 +86,10 @@ form input {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 16px;
+}
+
+.card.dark {
+  background-color: #565b60;
 }
 
 .detailButton {
@@ -152,7 +155,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: 0 auto; /* Centrado horizontalmente */
   padding: 10px 20px;
 }
@@ -183,6 +186,12 @@ body, html {
 .navbar.dark {
   background-color: #343a40;
 }
+.footer.dark {
+  background-color: #343a40;
+}
+.App.dark {
+  background-color: #343a40;
+}
 
 .navbar.dark .navbar-right a, .navbar.dark .navbar-right button {
   color: #fff;
@@ -209,4 +218,18 @@ body, html {
 
 .contact {
   text-align: center;
+}
+.contact.dark {
+  background-color: #565b60;
+}
+
+.favs.dark {
+  background-color: #565b60;
+}
+.home.dark {
+  background-color: #565b60;
+}
+
+.content {
+  padding: 20px;
 }

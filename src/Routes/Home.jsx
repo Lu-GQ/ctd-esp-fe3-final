@@ -13,7 +13,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div  className={`content home ${state.theme}`}>
       <h2 class="center-text">Home</h2>
       <div className="card-container">
         {state.dentists.map((dentist) => (

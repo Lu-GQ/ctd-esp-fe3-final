@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { GlobalContext } from "./utils/GlobalContext";
 
 const Card = ({ name, username, id }) => {
-
+  const { state, dispatch } = useContext(GlobalContext);
   const addFav = () => {
     const favDentists = JSON.parse(localStorage.getItem('favs')) || [];
     const newFav = { name, username, id };
@@ -15,7 +16,7 @@ const Card = ({ name, username, id }) => {
   }
 
   return (
-    <div className="card">
+    <div className={`card ${state.theme}`}>
       {/* En cada card deberan mostrar en name - username */}
       <img src="./images/doctor.jpg"/>
       <h4>{name}</h4>
