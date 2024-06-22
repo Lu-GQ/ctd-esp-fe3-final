@@ -29,7 +29,7 @@ const Navbar = () => {
         </ul>
         {/* Implementación de la lógica para cambiar de tema con el botón */}
         <button onClick={toggleTheme} className="theme-button">
-          {state.theme === "light" ? '🌞' : '🌜'}
+          {state.theme === "light" ? '🌜' : '🌞'}
         </button>
       </div>
     </nav>
