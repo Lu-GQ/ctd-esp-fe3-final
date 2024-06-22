@@ -5,10 +5,20 @@ import { GlobalContext } from "../Components/utils/GlobalContext";
 const Favs = () => {
   const { state, dispatch } = useContext(GlobalContext);
   const favs = JSON.parse(localStorage.getItem('favs')) || [];
+  const resetFavs = () => {
+
+    const confirmaBorrado = window.confirm("Confirm reset dentist list?");
+    if (confirmaBorrado) {
+      localStorage.setItem('favs', JSON.stringify([]));
+      alert("Dentist list reset successfully");
+      window.location.reload();
+    }
+  }
 
   return (
     <div className={`content favs ${state.theme}`}>
        <h2 className="center-text">Dentists Favs</h2>
+       {favs.length > 0 && <button className="resetButton" onClick={resetFavs} >Reiniciar favoritos</button>}
        <div className="card-container">
         {favs.map((dentist) => (
           <Card
