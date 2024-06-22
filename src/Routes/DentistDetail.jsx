@@ -23,9 +23,9 @@ const DentistDetail = () => {
 
     return (
       <div className={`content detail ${state.theme}`}>
-        <h1>Detail Dentist id {id}</h1>
+        <h1>Detail Dentist {id}</h1>
         {dentist ? (
-          <div>
+          <div class="detailBody">
             <p><strong>Name:</strong> {dentist.name}</p>
             <p><strong>Email:</strong> {dentist.email}</p>
             <p><strong>Phone:</strong> {dentist.phone}</p>

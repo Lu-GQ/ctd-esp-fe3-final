@@ -39,7 +39,7 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   padding: 2rem;
   position: relative;
@@ -100,6 +100,17 @@ form input {
   cursor: pointer;
 }
 
+.detail {
+  text-align: center;
+}
+.detail.dark {
+  background-color: #565b60;
+}
+
+.detailBody {
+  margin-top: 20px;
+}
+
 .detailButton {
   background-color: #007bff;
   color: white;
@@ -131,7 +142,6 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #12121296;
   color: white;
 }
 .dark > a {
@@ -160,14 +170,33 @@ body, html {
   padding: 10px 20px;
 }
 
-.navbar-left {
+.navbar-left, .footer-left  {
   font-size: 24px;
   font-weight: bold;
 }
 
-.navbar-right {
+.navbar-right, .footer-right {
   display: flex;
   gap: 20px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right img.light {
+  filter: brightness(0%) contrast(100%) invert(0%);
+}
+
+.footer-right img {
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-right a, .navbar-right button {

@@ -8,7 +8,7 @@ const Favs = () => {
 
   return (
     <div className={`content favs ${state.theme}`}>
-       <h2 class="center-text">Dentists Favs</h2>
+       <h2 className="center-text">Dentists Favs</h2>
        <div className="card-container">
         {favs.map((dentist) => (
           <Card

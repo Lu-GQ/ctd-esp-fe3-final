@@ -5,13 +5,20 @@ import { GlobalContext } from "./utils/GlobalContext";
 const Card = ({ name, username, id }) => {
   const { state, dispatch } = useContext(GlobalContext);
   const addFav = () => {
-    const favDentists = JSON.parse(localStorage.getItem('favs')) || [];
+    var favDentists = JSON.parse(localStorage.getItem('favs')) || [];
     const newFav = { name, username, id };
 
     // Evitar duplicados
-    if (!favDentists.some(dentist => dentist.id === id)) {
+    const yaExistente = favDentists.some(dentist => dentist.id === id);
+    if (yaExistente) {
+      favDentists = favDentists.filter(dentist => dentist.id !== id);
+      localStorage.setItem('favs', JSON.stringify(favDentists));
+      alert("Dentist removed successfully");
+      window.location.reload();
+    } else {
       favDentists.push(newFav);
       localStorage.setItem('favs', JSON.stringify(favDentists));
+      alert("Dentist added successfully");
     }
   }
 
