@@ -13,7 +13,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div  classNgit ame={`content home ${state.theme}`}>
+    <div  className={`content home ${state.theme}`}>
       <h2 className="center-text">Home</h2>
       <div className="card-container">
         {state.dentists.map((dentist) => (
