@@ -1,17 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useReducer } from 'react';
 import Card from "../Components/Card";
 import { GlobalContext } from "../Components/utils/GlobalContext";
 
 const Favs = () => {
   const { state, dispatch } = useContext(GlobalContext);
+  const [, forceUpdate] = useReducer(x => x + 1, 0);
   const favs = JSON.parse(localStorage.getItem('favs')) || [];
   const resetFavs = () => {
-
     const confirmaBorrado = window.confirm("Confirm reset dentist list?");
     if (confirmaBorrado) {
       localStorage.setItem('favs', JSON.stringify([]));
       alert("Dentist list reset successfully");
-      window.location.reload();
+      forceUpdate();
     }
   }
 
